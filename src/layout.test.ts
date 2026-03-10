@@ -148,6 +148,11 @@ describe('prepare invariants', () => {
     expect(prepared.segments).toEqual(['invented,', ' ', '“‘George', ' ', 'B.', ' ', 'Wilson'])
   })
 
+  test('treats ascii quotes as opening and closing glue by context', () => {
+    const prepared = prepareWithSegments('said "hello" there', FONT)
+    expect(prepared.segments).toEqual(['said', ' ', '"hello"', ' ', 'there'])
+  })
+
   test('does not attach opening punctuation to following whitespace', () => {
     const prepared = prepareWithSegments('“ hello', FONT)
     expect(prepared.segments).toEqual(['“', ' ', 'hello'])

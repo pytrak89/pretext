@@ -14,6 +14,12 @@ Current bundle:
   - URL: <https://ko.wikisource.org/wiki/%EC%9A%B4%EC%88%98_%EC%A2%8B%EC%9D%80_%EB%82%A0>
   - Acquisition: Wikisource `extracts` API, lightly cleaned
 
+- `th-nithan-vetal-story-1.txt`
+  - Language: Thai
+  - Source: `นิทานเวตาล/เรื่องที่ 1`
+  - URL: <https://th.wikisource.org/wiki/%E0%B8%99%E0%B8%B4%E0%B8%97%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%A7%E0%B8%95%E0%B8%B2%E0%B8%A5/%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88_1>
+  - Acquisition: Wikisource `parse` API, trimmed to the story body with header navigation and trailing footnote removed
+
 - `ar-risalat-al-ghufran-part-1.txt`
   - Language: Arabic
   - Source: Al-Ma'arri, `رسالة الغفران/الجزء الأول`

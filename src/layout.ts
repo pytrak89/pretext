@@ -253,6 +253,7 @@ const kinsokuStart = new Set([
 // merging.
 const kinsokuEnd = new Set([
   // ASCII/Latin
+  '"',
   '(', '[', '{',
   // Curly quotes / guillemets
   '“', '‘', '«', '‹',
@@ -288,6 +289,7 @@ const leftStickyPunctuation = new Set([
   '\u0965', // ॥
   ')', ']', '}',
   '%',
+  '"',
   '”', '’', '»', '›',
   '…',
 ])

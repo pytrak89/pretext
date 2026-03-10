@@ -587,6 +587,15 @@ Browser (canvas measureText, named fonts), 4 fonts × 8 sizes × 8 widths × 30 
 - Safari: 7680/7680 (100%)
 - Firefox: 7680/7680 (100%)
 
+## Thai corpus note
+
+Adding a Thai prose corpus (`นิทานเวตาล/เรื่องที่ 1`) exposed a different class than the Arabic/Hebrew work:
+not dictionary segmentation failure, but ASCII quote behavior in prose like `ทูลว่า "พระองค์...`.
+
+Treating ASCII `"` as contextual quote glue during preprocessing was enough to collapse the Thai coarse
+field from `43/61 exact` to `59/61 exact`, without moving the browser accuracy corpus in Safari or Firefox.
+The two remaining coarse Thai misses are both the familiar tiny positive edge-fit class (`+32px`).
+
 Headless (HarfBuzz, Arial Unicode):
 - 1920/1920 (100%) word-sum vs full-line measurement
 - Algorithm is exact under the headless HarfBuzz backend; the browser sweeps are now also clean on fresh runs.
